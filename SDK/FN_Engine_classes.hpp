@@ -338,7 +338,8 @@ public:
 	TArray<class USceneComponent*>                     AttachChildren;                                           // 0x00F8(0x0010) (CPF_ExportObject, CPF_Net, CPF_ZeroConstructor, CPF_Transient)
 	TArray<class USceneComponent*>                     ClientAttachedChildren;                                   // 0x0108(0x0010) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient)
 	struct FName                                       AttachSocketName;                                         // 0x0118(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1C];                                      // 0x0120(0x001C) MISSED OFFSET
+	FVector											   Location;												 // 0x0120(0x000C)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x012C(0x0010) MISSED OFFSET	
 	unsigned char                                      bWorldToComponentUpdated : 1;                             // 0x013C(0x0001) (CPF_Transient)
 	unsigned char                                      bAbsoluteLocation : 1;                                    // 0x013C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_Net)
 	unsigned char                                      bAbsoluteRotation : 1;                                    // 0x013C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_Net)
